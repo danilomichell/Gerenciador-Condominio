@@ -17,7 +17,7 @@ public static class MediatRExtensions
     /// <returns></returns>
     public static IServiceCollection AddMediatR(this IServiceCollection services)
     {
-        var assembly = AppDomain.CurrentDomain.Load("Imdb.Service");
+        var assembly = AppDomain.CurrentDomain.Load("Condominio.Service");
         services.AddValidatorsFromAssembly(assembly);
         services.AddMediatR(assembly);
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
