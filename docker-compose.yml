@@ -3,8 +3,8 @@ version: '3.4'
 services:
   postgres:
     image: postgres
-  imdb.api:
-    image: ${DOCKER_REGISTRY-}imdbapi
+  condominio.api:
+    image: ${DOCKER_REGISTRY-}condominioapi
     build:
       context: .
       dockerfile: Src/Condominio.Api/Dockerfile
